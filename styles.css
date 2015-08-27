@@ -72,6 +72,8 @@ h1, h2, h3, h4, h5 {
     border-width: 1px 1px 0 1px;
     border-color: #898989;
     padding-top: 6px;
+    z-index: 3;
+    box-shadow: 0 2px 0 -1px white;
 }
       
 [id^=tab]:checked ~ [id^=tab-content] {
