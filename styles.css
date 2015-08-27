@@ -45,9 +45,7 @@ h1, h2, h3, h4, h5 {
     display: block;
     padding: 10px 20px;
     color: #1F76BC; /* normal link color */
-    font-size: 24px;
     font-weight: normal;
-    font-family: 'Lily Script One', helveti;
     cursor: pointer;
     position: relative;
 
