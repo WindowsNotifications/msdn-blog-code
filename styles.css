@@ -59,7 +59,6 @@ h1, h2, h3, h4, h5 {
     transition: all 0.2s ease-in-out;*/
 }
 .tabs label:hover {
-    background: rgba(255,255,255,0.5);
     color: #00BCF2; /* hover link color */
 
     /* Transitions are cool, but not MSDN style */
