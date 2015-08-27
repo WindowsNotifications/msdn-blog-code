@@ -82,16 +82,12 @@ h1, h2, h3, h4, h5 {
 .tab-content{
     z-index: 2;
     display: none;
-    text-align: left;
     width: 100%;
-    font-size: 20px;
-    line-height: 140%;
-    padding-top: 10px;
-    background: #08C;
-    padding: 15px;
-    color: white;
+    padding: 12px;
+    border-style: solid;
+    border-color: #898989;
+    border-width: 1px;
     position: absolute;
-    top: 53px;
     left: 0;
     box-sizing: border-box;
     -webkit-animation-duration: 0.5s;
