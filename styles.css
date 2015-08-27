@@ -104,3 +104,17 @@ h1, h2, h3, h4, h5 {
 	clear: both;
 	visibility: hidden;
 }
+
+/* word wrapping for pre elements inside our tabs from http://stackoverflow.com/questions/248011/how-do-i-wrap-text-in-a-pre-tag */
+pre.wrap {
+    white-space: pre-wrap;       /* CSS 3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+/* pre's get margin by default for some reason, looks bad inside our tab */
+.tabs pre {
+    margin: 0;
+}

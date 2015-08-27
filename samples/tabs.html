@@ -9,17 +9,109 @@
 <body>
 <p>Trying out a code sample toggle switch</p>
 <ul class="tabs">
-<li><input id="tab1" type="radio" name="tabs" checked="checked" /> <label for="tab1">tab 1</label>
-<div id="tab-content1" class="tab-content animated fadeIn">First tab content section</div>
+<li><input id="tab1" type="radio" name="tabs" checked="checked" /> <label for="tab1">XML</label>
+<div id="tab-content1" class="tab-content animated fadeIn">
+
+<pre><span style="color: #7f0055;">&lt;</span><span style="color: #7f0055;">tile</span><span style="color: #7f0055;">&gt;</span>
+  <span style="color: #7f0055;">&lt;</span><span style="color: #7f0055;">visual</span><span style="color: #7f0055;">&gt;</span>
+
+    <span style="color: #7f0055;">&lt;</span><span style="color: #7f0055;">binding</span> template=<span style="color: #2a00ff;">"</span><span style="color: #2a00ff;">TileSmall</span><span style="color: #2a00ff;">"</span><span style="color: #7f0055;">&gt;</span>
+      <span style="color: #7f0055;">&lt;</span><span style="color: #7f0055;">text</span><span style="color: #7f0055;">&gt;</span>Small<span style="color: #7f0055;">&lt;/</span><span style="color: #7f0055;">text</span><span style="color: #7f0055;">&gt;</span>
+    <span style="color: #7f0055;">&lt;/</span><span style="color: #7f0055;">binding</span><span style="color: #7f0055;">&gt;</span>
+
+    <span style="color: #7f0055;">&lt;</span><span style="color: #7f0055;">binding</span> template=<span style="color: #2a00ff;">"</span><span style="color: #2a00ff;">TileMedium</span><span style="color: #2a00ff;">"</span><span style="color: #7f0055;">&gt;</span>
+      <span style="color: #7f0055;">&lt;</span><span style="color: #7f0055;">text</span><span style="color: #7f0055;">&gt;</span>Medium<span style="color: #7f0055;">&lt;/</span><span style="color: #7f0055;">text</span><span style="color: #7f0055;">&gt;</span>
+    <span style="color: #7f0055;">&lt;/</span><span style="color: #7f0055;">binding</span><span style="color: #7f0055;">&gt;</span>
+
+    <span style="color: #7f0055;">&lt;</span><span style="color: #7f0055;">binding</span> template=<span style="color: #2a00ff;">"</span><span style="color: #2a00ff;">TileWide</span><span style="color: #2a00ff;">"</span><span style="color: #7f0055;">&gt;</span>
+      <span style="color: #7f0055;">&lt;</span><span style="color: #7f0055;">text</span><span style="color: #7f0055;">&gt;</span>Wide<span style="color: #7f0055;">&lt;/</span><span style="color: #7f0055;">text</span><span style="color: #7f0055;">&gt;</span>
+    <span style="color: #7f0055;">&lt;/</span><span style="color: #7f0055;">binding</span><span style="color: #7f0055;">&gt;</span>
+
+    <span style="color: #7f0055;">&lt;</span><span style="color: #7f0055;">binding</span> template=<span style="color: #2a00ff;">"</span><span style="color: #2a00ff;">TileLarge</span><span style="color: #2a00ff;">"</span><span style="color: #7f0055;">&gt;</span>
+      <span style="color: #7f0055;">&lt;</span><span style="color: #7f0055;">text</span><span style="color: #7f0055;">&gt;</span>Large<span style="color: #7f0055;">&lt;/</span><span style="color: #7f0055;">text</span><span style="color: #7f0055;">&gt;</span>
+    <span style="color: #7f0055;">&lt;/</span><span style="color: #7f0055;">binding</span><span style="color: #7f0055;">&gt;</span>
+
+  <span style="color: #7f0055;">&lt;/</span><span style="color: #7f0055;">visual</span><span style="color: #7f0055;">&gt;</span>
+<span style="color: #7f0055;">&lt;/</span><span style="color: #7f0055;">tile</span><span style="color: #7f0055;">&gt;</span>
+</pre>
+
+
+</div>
 </li>
-<li><input id="tab2" type="radio" name="tabs" /> <label for="tab2">tab 2</label>
-<div id="tab-content2" class="tab-content animated fadeIn">Second tab content section</div>
+<li><input id="tab2" type="radio" name="tabs" /> <label for="tab2">C#</label>
+<div id="tab-content2" class="tab-content animated fadeIn">
+
+<pre style='color:#000000;background:#ffffff;'><span style='color:#7f0055; font-weight:bold; '>new</span> TileContent()
+{
+    Visual = <span style='color:#7f0055; font-weight:bold; '>new</span> TileVisual()
+    {
+        TileSmall = <span style='color:#7f0055; font-weight:bold; '>new</span> TileBinding()
+        {
+            Content = <span style='color:#7f0055; font-weight:bold; '>new</span> TileBindingContentAdaptive()
+            {
+                Children =
+                {
+                    <span style='color:#7f0055; font-weight:bold; '>new</span> TileText()
+                    {
+                        Text = <span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>Small</span><span style='color:#2a00ff; '>"</span>
+                    }
+                }
+            }
+        },
+
+        TileMedium = <span style='color:#7f0055; font-weight:bold; '>new</span> TileBinding()
+        {
+            Content = <span style='color:#7f0055; font-weight:bold; '>new</span> TileBindingContentAdaptive()
+            {
+                Children =
+                {
+                    <span style='color:#7f0055; font-weight:bold; '>new</span> TileText()
+                    {
+                        Text = <span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>Medium</span><span style='color:#2a00ff; '>"</span>
+                    }
+                }
+            }
+        },
+
+        TileWide = <span style='color:#7f0055; font-weight:bold; '>new</span> TileBinding()
+        {
+            Content = <span style='color:#7f0055; font-weight:bold; '>new</span> TileBindingContentAdaptive()
+            {
+                Children =
+                {
+                    <span style='color:#7f0055; font-weight:bold; '>new</span> TileText()
+                    {
+                        Text = <span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>Wide</span><span style='color:#2a00ff; '>"</span>
+                    }
+                }
+            }
+        },
+
+        TileLarge = <span style='color:#7f0055; font-weight:bold; '>new</span> TileBinding()
+        {
+            Content = <span style='color:#7f0055; font-weight:bold; '>new</span> TileBindingContentAdaptive()
+            {
+                Children =
+                {
+                    <span style='color:#7f0055; font-weight:bold; '>new</span> TileText()
+                    {
+                        Text = <span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>Large</span><span style='color:#2a00ff; '>"</span>
+                    }
+                }
+            }
+        }
+    }
+};
+</pre>
+
+</div>
 </li>
 <li><input id="tab3" type="radio" name="tabs" /> <label for="tab3">tab 3</label>
-<div id="tab-content3" class="tab-content animated fadeIn">Third tab content section</div>
+<div id="tab-content3" class="tab-content animated fadeIn"><pre>why the extra padding?</pre></div>
 </li>
 </ul>
+
+<p>And then this should appear after the code box</p>
+
 </body>
 </html>
-
-<p>Grrrr that works fine</p>
