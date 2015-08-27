@@ -1,0 +1,101 @@
+/* word wrapping for pre elements from http://stackoverflow.com/questions/248011/how-do-i-wrap-text-in-a-pre-tag */
+pre.snippet {
+    white-space: pre-wrap;       /* CSS 3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+
+    padding: 1rem;
+    border-style: solid;
+    border-width: thin;
+}
+
+h1, h2, h3, h4, h5 {
+    margin-top: 1em;
+}
+
+
+
+      .tabs input[type=radio] {
+          position: absolute;
+          top: -9999px;
+          left: -9999px;
+      }
+      .tabs {
+        width: 650px;
+        float: none;
+        list-style: none;
+        position: relative;
+        padding: 0;
+        margin: 75px auto;
+      }
+      .tabs li{
+        float: left;
+      }
+      .tabs label {
+          display: block;
+          padding: 10px 20px;
+          color: #1F76BC; /* normal link color */
+          font-size: 24px;
+          font-weight: normal;
+          font-family: 'Lily Script One', helveti;
+          cursor: pointer;
+          position: relative;
+
+
+          /* Transitions are cool, but not MSDN style */
+          /*
+          top: 3px;
+          -webkit-transition: all 0.2s ease-in-out;
+          -moz-transition: all 0.2s ease-in-out;
+          -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;*/
+      }
+      .tabs label:hover {
+        background: rgba(255,255,255,0.5);
+        color: #00BCF2; /* hover link color */
+
+        /* Transitions are cool, but not MSDN style */
+        /*top: 0;*/
+      }
+      
+      [id^=tab]:checked + label {
+        top: 0;
+        border-radius: 3px 3px 0 0;
+        border-style: solid;
+        border-width: 1px 1px 0 1px;
+        border-color: #898989;
+      }
+      
+      [id^=tab]:checked ~ [id^=tab-content] {
+          display: block;
+      }
+      .tab-content{
+        z-index: 2;
+        display: none;
+        text-align: left;
+        width: 100%;
+        font-size: 20px;
+        line-height: 140%;
+        padding-top: 10px;
+        background: #08C;
+        padding: 15px;
+        color: white;
+        position: absolute;
+        top: 53px;
+        left: 0;
+        box-sizing: border-box;
+        -webkit-animation-duration: 0.5s;
+        -o-animation-duration: 0.5s;
+        -moz-animation-duration: 0.5s;
+        animation-duration: 0.5s;
+      }
+
+.tabs::after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
