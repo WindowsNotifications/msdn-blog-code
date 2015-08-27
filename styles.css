@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5 {
     display: block;
     padding: 10px 20px;
     color: #1F76BC; /* normal link color */
-    font-weight: normal;
+    font-weight: bold;
     cursor: pointer;
     position: relative;
 
