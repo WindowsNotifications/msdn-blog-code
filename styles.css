@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5 {
 /* TABS */
 
 /* style tab header */
-.tabs .tab-header {
+.tabs > label {
     display: inline-block;
     padding: 7px 12px;
     color: #1F76BC; /* normal link color */
@@ -35,35 +35,21 @@ h1, h2, h3, h4, h5 {
 
 
 /* when hovering on tab header */
-.tabs .tab-header:hover {
+.tabs > label:hover {
     color: #00BCF2; /* hover link color */
 }
 
 
-/* after last header, place clearfix break */
-.tabs .tab-header:last-of-type {
-	content: ".";
-	display: block;
-	height: 0;
-	clear: both;
-	visibility: hidden;
-}
 
-
-/* place a radio box before each tab item */
-.tabs .tab-header:before {
-    content: "<input type='radio' class='tab-radio' name='tabs' />";
-}
-
-/* style that radio box so it's not visible */
-.tabs .tab-radio {
+/* style the radio box so it's not visible */
+.tabs > input[name="tab"] {
     position: absolute;
     top: -9999px;
     left: -9999px;
 }
       
 /* and when the radio is checked, format the tab header*/
-.tabs .tab-radio:checked + .tab-header {
+.tabs > input[name="tab"]:checked + label {
     top: 0;
     border-radius: 3px 3px 0 0;
     border-style: solid;
@@ -75,16 +61,17 @@ h1, h2, h3, h4, h5 {
 }
       
 /* and when radio is checked, show the associated tab content */
-.tabs .tab-radio[data-tab="1"]:checked ~ .tab-content[data-tab="1"] ,
-.tabs .tab-radio[data-tab="2"]:checked ~ .tab-content[data-tab="2"] ,
-.tabs .tab-radio[data-tab="3"]:checked ~ .tab-content[data-tab="3"] ,
-.tabs .tab-radio[data-tab="4"]:checked ~ .tab-content[data-tab="4"] ,
-.tabs .tab-radio[data-tab="5"]:checked ~ .tab-content[data-tab="5"] {
+.tabs input[name="tab"]:nth-of-type(1):checked ~ :not(input):not(label):nth-of-type(1) ,
+.tabs input[name="tab"]:nth-of-type(2):checked ~ :not(input):not(label):nth-of-type(2) ,
+.tabs input[name="tab"]:nth-of-type(3):checked ~ :not(input):not(label):nth-of-type(3) ,
+.tabs input[name="tab"]:nth-of-type(4):checked ~ :not(input):not(label):nth-of-type(4) ,
+.tabs input[name="tab"]:nth-of-type(5):checked ~ :not(input):not(label):nth-of-type(5) {
     display: block;
 }
 
 /* formatting of the tab content */
-.tabs .tab-content{
+.tabs > :not(input):not(label){
+    clear: both;
     z-index: 2;
     display: none;
     width: 100%;

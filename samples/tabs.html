@@ -11,19 +11,19 @@
 
 
     <form class="tabs">
-        <input id="tab1" type="radio" name="tab"/>
-        <label for="tab1">XML</label>
+        <input id="tabs-first-tab1" type="radio" name="tab" checked/>
+        <label for="tabs-first-tab1">XML</label>
 
-        <input id="tab2" type="radio" name="tab"/>
-        <label for="tab2">C#</label>
+        <input id="tabs-first-tab2" type="radio" name="tab"/>
+        <label for="tabs-first-tab2">C#</label>
 
-        <input id="tab3" type="radio" name="tab"/>
-        <label for="tab3">Tab3</label>
+        <input id="tabs-first-tab3" type="radio" name="tab"/>
+        <label for="tabs-first-tab3">Tab3</label>
 
-        <input id="tab4" type="radio" name="tab"/>
-        <label for="tab4">Tab4</label>
+        <input id="tabs-first-tab4" type="radio" name="tab"/>
+        <label for="tabs-first-tab4">Tab4</label>
 
-        <div class="tab-content"  data-tab="1">
+        <div>
 <pre><span style="color: #7f0055;">&lt;</span><span style="color: #7f0055;">tile</span><span style="color: #7f0055;">&gt;</span>
   <span style="color: #7f0055;">&lt;</span><span style="color: #7f0055;">visual</span><span style="color: #7f0055;">&gt;</span>
 
@@ -49,7 +49,7 @@
         </div>
 
 
-        <div class="tab-content" data-tab="2">
+        <div>
 <pre style='color:#000000;background:#ffffff;'><span style='color:#7f0055; font-weight:bold; '>new</span> TileContent()
 {
     Visual = <span style='color:#7f0055; font-weight:bold; '>new</span> TileVisual()
@@ -114,27 +114,36 @@
 </pre>
         </div>
 
-        <div class="tab-content" data-tab="3">Third section of content right here</div>
+        <div>Third section of content right here</div>
 
-        <div class="tab-content" data-tab="4">Fourth section of content, last one!</div>
+        <div>Fourth section of content, last one!</div>
     </form>
 
 
 
 <p>And then this should appear after the code box</p>
 
+    <!--Placing it in a form ensures that the name attribute on inputs doesn't have to be unique across the whole document.-->
     <form class="tabs">
-        <input id="tab1" type="radio"  name="tab" value="helloooo"/>
-        <label>XML</label>
 
-        <input id="tab2" type="radio"  name="tab"/>
-        <label for="tab2">C#</label>
+        <!--Input and labels need to be listed first-->
 
-        <div class="tab-content" data-tab="1">First content
+        <!--ID's need to be unique across the entire document-->
+        <!--name attribute must be left as "tab"-->
+        <input id="tabs-second-tab1" type="radio" name="tab" checked/>
+        <label for="tabs-second-tab1">XML</label> <!--label must directly follow-->
+
+        <input id="tabs-second-tab2" type="radio" name="tab"/>
+        <label for="tabs-second-tab2">C#</label>
+
+
+        <!--Then contents come after all the inputs-->
+        <!--Order matters, must match up with the input orders-->
+        <div>First content
         </div>
 
 
-        <div class="tab-content" data-tab="2">Second content
+        <div>Second content
         </div>
     </form>
 
