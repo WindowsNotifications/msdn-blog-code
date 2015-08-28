@@ -22,48 +22,34 @@ h1, h2, h3, h4, h5 {
 
 /* TABS */
 
-.tabs input[type=radio] {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-}
-
-.tabs {
-    float: none;
-    list-style: none;
-    position: relative;
-    padding: 0;
-}
-
-.tabs li{
-    float: left;
-}
-
-.tabs label {
-    display: block;
+/* style tab header */
+.tabs > label {
+    display: inline-block;
     padding: 7px 12px;
     color: #1F76BC; /* normal link color */
     font-weight: bold;
     cursor: pointer;
     position: relative;
-
-
-    /* Transitions are cool, but not MSDN style */
-    /*
-    top: 3px;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;*/
+    float: left;
 }
-.tabs label:hover {
-    color: #00BCF2; /* hover link color */
 
-    /* Transitions are cool, but not MSDN style */
-    /*top: 0;*/
+
+/* when hovering on tab header */
+.tabs > label:hover {
+    color: #00BCF2; /* hover link color */
+}
+
+
+
+/* style the radio box so it's not visible */
+.tabs > input[name="tab"] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
 }
       
-[id^=tab]:checked + label {
+/* and when the radio is checked, format the tab header*/
+.tabs > input[name="tab"]:checked + label {
     top: 0;
     border-radius: 3px 3px 0 0;
     border-style: solid;
@@ -74,11 +60,18 @@ h1, h2, h3, h4, h5 {
     box-shadow: 0 2px 0 -1px white;
 }
       
-[id^=tab]:checked ~ [id^=tab-content] {
+/* and when radio is checked, show the associated tab content */
+.tabs input[name="tab"]:nth-of-type(1):checked ~ :not(input):not(label):nth-of-type(1) ,
+.tabs input[name="tab"]:nth-of-type(2):checked ~ :not(input):not(label):nth-of-type(2) ,
+.tabs input[name="tab"]:nth-of-type(3):checked ~ :not(input):not(label):nth-of-type(3) ,
+.tabs input[name="tab"]:nth-of-type(4):checked ~ :not(input):not(label):nth-of-type(4) ,
+.tabs input[name="tab"]:nth-of-type(5):checked ~ :not(input):not(label):nth-of-type(5) {
     display: block;
 }
 
-.tab-content{
+/* formatting of the tab content */
+.tabs > :not(input):not(label){
+    clear: both;
     z-index: 2;
     display: none;
     width: 100%;
@@ -86,8 +79,6 @@ h1, h2, h3, h4, h5 {
     border-style: solid;
     border-color: #898989;
     border-width: 1px;
-    position: absolute;
-    left: 0;
     box-sizing: border-box;
     -webkit-animation-duration: 0.5s;
     -o-animation-duration: 0.5s;
@@ -95,6 +86,7 @@ h1, h2, h3, h4, h5 {
     animation-duration: 0.5s;
 }
 
+/* PROBABLY NOT NEEDED ANYMORE! */
 .tabs::after {
 	content: ".";
 	display: block;
