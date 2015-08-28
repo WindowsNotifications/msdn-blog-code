@@ -22,48 +22,48 @@ h1, h2, h3, h4, h5 {
 
 /* TABS */
 
-.tabs input[type=radio] {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-}
-
-.tabs {
-    float: none;
-    list-style: none;
-    position: relative;
-    padding: 0;
-}
-
-.tabs li{
-    float: left;
-}
-
-.tabs label {
-    display: block;
+/* style tab header */
+.tabs .tab-header {
+    display: inline-block;
     padding: 7px 12px;
     color: #1F76BC; /* normal link color */
     font-weight: bold;
     cursor: pointer;
     position: relative;
-
-
-    /* Transitions are cool, but not MSDN style */
-    /*
-    top: 3px;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;*/
+    float: left;
 }
-.tabs label:hover {
-    color: #00BCF2; /* hover link color */
 
-    /* Transitions are cool, but not MSDN style */
-    /*top: 0;*/
+
+/* when hovering on tab header */
+.tabs .tab-header:hover {
+    color: #00BCF2; /* hover link color */
+}
+
+
+/* after last header, place clearfix break */
+.tabs .tab-header:last-of-type {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+
+/* place a radio box before each tab item */
+.tabs .tab-header:before {
+    content: "<input type='radio' class='tab-radio' name='tabs' />";
+}
+
+/* style that radio box so it's not visible */
+.tabs .tab-radio {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
 }
       
-[id^=tab]:checked + label {
+/* and when the radio is checked, format the tab header*/
+.tabs .tab-radio:checked + .tab-header {
     top: 0;
     border-radius: 3px 3px 0 0;
     border-style: solid;
@@ -74,11 +74,17 @@ h1, h2, h3, h4, h5 {
     box-shadow: 0 2px 0 -1px white;
 }
       
-[id^=tab]:checked ~ [id^=tab-content] {
+/* and when radio is checked, show the associated tab content */
+.tabs .tab-radio[data-tab="1"]:checked ~ .tab-content[data-tab="1"] ,
+.tabs .tab-radio[data-tab="2"]:checked ~ .tab-content[data-tab="2"] ,
+.tabs .tab-radio[data-tab="3"]:checked ~ .tab-content[data-tab="3"] ,
+.tabs .tab-radio[data-tab="4"]:checked ~ .tab-content[data-tab="4"] ,
+.tabs .tab-radio[data-tab="5"]:checked ~ .tab-content[data-tab="5"] {
     display: block;
 }
 
-.tab-content{
+/* formatting of the tab content */
+.tabs .tab-content{
     z-index: 2;
     display: none;
     width: 100%;
@@ -86,8 +92,6 @@ h1, h2, h3, h4, h5 {
     border-style: solid;
     border-color: #898989;
     border-width: 1px;
-    position: absolute;
-    left: 0;
     box-sizing: border-box;
     -webkit-animation-duration: 0.5s;
     -o-animation-duration: 0.5s;
@@ -95,6 +99,7 @@ h1, h2, h3, h4, h5 {
     animation-duration: 0.5s;
 }
 
+/* PROBABLY NOT NEEDED ANYMORE! */
 .tabs::after {
 	content: ".";
 	display: block;

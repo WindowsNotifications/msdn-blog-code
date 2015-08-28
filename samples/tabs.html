@@ -8,10 +8,22 @@
 
 <body>
 <p>Trying out a code sample toggle switch</p>
-<ul class="tabs">
-<li><input id="tab1" type="radio" name="tabs" checked="checked" /> <label for="tab1">XML</label>
-<div id="tab-content1" class="tab-content animated fadeIn">
 
+
+    <form class="tabs">
+        <input id="tab1" type="radio" name="tab"/>
+        <label for="tab1">XML</label>
+
+        <input id="tab2" type="radio" name="tab"/>
+        <label for="tab2">C#</label>
+
+        <input id="tab3" type="radio" name="tab"/>
+        <label for="tab3">Tab3</label>
+
+        <input id="tab4" type="radio" name="tab"/>
+        <label for="tab4">Tab4</label>
+
+        <div class="tab-content"  data-tab="1">
 <pre><span style="color: #7f0055;">&lt;</span><span style="color: #7f0055;">tile</span><span style="color: #7f0055;">&gt;</span>
   <span style="color: #7f0055;">&lt;</span><span style="color: #7f0055;">visual</span><span style="color: #7f0055;">&gt;</span>
 
@@ -34,13 +46,10 @@
   <span style="color: #7f0055;">&lt;/</span><span style="color: #7f0055;">visual</span><span style="color: #7f0055;">&gt;</span>
 <span style="color: #7f0055;">&lt;/</span><span style="color: #7f0055;">tile</span><span style="color: #7f0055;">&gt;</span>
 </pre>
+        </div>
 
 
-</div>
-</li>
-<li><input id="tab2" type="radio" name="tabs" /> <label for="tab2">C#</label>
-<div id="tab-content2" class="tab-content animated fadeIn">
-
+        <div class="tab-content" data-tab="2">
 <pre style='color:#000000;background:#ffffff;'><span style='color:#7f0055; font-weight:bold; '>new</span> TileContent()
 {
     Visual = <span style='color:#7f0055; font-weight:bold; '>new</span> TileVisual()
@@ -103,15 +112,31 @@
     }
 };
 </pre>
+        </div>
 
-</div>
-</li>
-<li><input id="tab3" type="radio" name="tabs" /> <label for="tab3">tab 3</label>
-<div id="tab-content3" class="tab-content animated fadeIn"><pre>why the extra padding?</pre></div>
-</li>
-</ul>
+        <div class="tab-content" data-tab="3">Third section of content right here</div>
+
+        <div class="tab-content" data-tab="4">Fourth section of content, last one!</div>
+    </form>
+
+
 
 <p>And then this should appear after the code box</p>
+
+    <form class="tabs">
+        <input id="tab1" type="radio"  name="tab" value="helloooo"/>
+        <label>XML</label>
+
+        <input id="tab2" type="radio"  name="tab"/>
+        <label for="tab2">C#</label>
+
+        <div class="tab-content" data-tab="1">First content
+        </div>
+
+
+        <div class="tab-content" data-tab="2">Second content
+        </div>
+    </form>
 
 </body>
 </html>
