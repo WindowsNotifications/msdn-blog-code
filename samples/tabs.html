@@ -10,17 +10,17 @@
 <p>Trying out a code sample toggle switch</p>
 
 
-    <form class="tabs">
-        <input id="tabs-first-tab1" type="radio" name="tab" checked/>
+    <div class="tabs">
+        <input id="tabs-first-tab1" type="radio" name="tabs-first" checked/>
         <label for="tabs-first-tab1">XML</label>
 
-        <input id="tabs-first-tab2" type="radio" name="tab"/>
+        <input id="tabs-first-tab2" type="radio" name="tabs-first"/>
         <label for="tabs-first-tab2">C#</label>
 
-        <input id="tabs-first-tab3" type="radio" name="tab"/>
+        <input id="tabs-first-tab3" type="radio" name="tabs-first"/>
         <label for="tabs-first-tab3">Tab3</label>
 
-        <input id="tabs-first-tab4" type="radio" name="tab"/>
+        <input id="tabs-first-tab4" type="radio" name="tabs-first"/>
         <label for="tabs-first-tab4">Tab4</label>
 
         <div>
@@ -117,23 +117,23 @@
         <div>Third section of content right here</div>
 
         <div>Fourth section of content, last one!</div>
-    </form>
+    </div>
 
 
 
 <p>And then this should appear after the code box</p>
 
     <!--Placing it in a form ensures that the name attribute on inputs doesn't have to be unique across the whole document.-->
-    <form class="tabs">
+    <div class="tabs">
 
         <!--Input and labels need to be listed first-->
 
         <!--ID's need to be unique across the entire document-->
-        <!--name attribute must be left as "tab"-->
-        <input id="tabs-second-tab1" type="radio" name="tab" checked/>
+        <!--name attribute must match for these inputs, but unique across the rest of doc-->
+        <input id="tabs-second-tab1" type="radio" name="tabs-second" checked/>
         <label for="tabs-second-tab1">XML</label> <!--label must directly follow-->
 
-        <input id="tabs-second-tab2" type="radio" name="tab"/>
+        <input id="tabs-second-tab2" type="radio" name="tabs-second"/>
         <label for="tabs-second-tab2">C#</label>
 
 
@@ -145,7 +145,7 @@
 
         <div>Second content
         </div>
-    </form>
+    </div>
 
 </body>
 </html>
