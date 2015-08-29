@@ -43,9 +43,8 @@ h1, h2, h3, h4, h5 {
 
 /* style the radio box so it's not visible */
 .tabs > input {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
+    position: fixed;
+    visibility: hidden;
 }
       
 /* and when the radio is checked, format the tab header*/
