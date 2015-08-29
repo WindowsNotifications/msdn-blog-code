@@ -1,0 +1,130 @@
+<html>
+
+<head>
+<link rel="stylesheet" href="..\styles.css"/>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="..\main.js"></script>
+</head>
+
+
+
+<body>
+
+
+
+<p>Trying out a code sample toggle switch</p>
+
+
+    <div class="tabs">
+        <div data-tab="XML">
+<pre><span style="color: #7f0055;">&lt;</span><span style="color: #7f0055;">tile</span><span style="color: #7f0055;">&gt;</span>
+  <span style="color: #7f0055;">&lt;</span><span style="color: #7f0055;">visual</span><span style="color: #7f0055;">&gt;</span>
+
+    <span style="color: #7f0055;">&lt;</span><span style="color: #7f0055;">binding</span> template=<span style="color: #2a00ff;">"</span><span style="color: #2a00ff;">TileSmall</span><span style="color: #2a00ff;">"</span><span style="color: #7f0055;">&gt;</span>
+      <span style="color: #7f0055;">&lt;</span><span style="color: #7f0055;">text</span><span style="color: #7f0055;">&gt;</span>Small<span style="color: #7f0055;">&lt;/</span><span style="color: #7f0055;">text</span><span style="color: #7f0055;">&gt;</span>
+    <span style="color: #7f0055;">&lt;/</span><span style="color: #7f0055;">binding</span><span style="color: #7f0055;">&gt;</span>
+
+    <span style="color: #7f0055;">&lt;</span><span style="color: #7f0055;">binding</span> template=<span style="color: #2a00ff;">"</span><span style="color: #2a00ff;">TileMedium</span><span style="color: #2a00ff;">"</span><span style="color: #7f0055;">&gt;</span>
+      <span style="color: #7f0055;">&lt;</span><span style="color: #7f0055;">text</span><span style="color: #7f0055;">&gt;</span>Medium<span style="color: #7f0055;">&lt;/</span><span style="color: #7f0055;">text</span><span style="color: #7f0055;">&gt;</span>
+    <span style="color: #7f0055;">&lt;/</span><span style="color: #7f0055;">binding</span><span style="color: #7f0055;">&gt;</span>
+
+    <span style="color: #7f0055;">&lt;</span><span style="color: #7f0055;">binding</span> template=<span style="color: #2a00ff;">"</span><span style="color: #2a00ff;">TileWide</span><span style="color: #2a00ff;">"</span><span style="color: #7f0055;">&gt;</span>
+      <span style="color: #7f0055;">&lt;</span><span style="color: #7f0055;">text</span><span style="color: #7f0055;">&gt;</span>Wide<span style="color: #7f0055;">&lt;/</span><span style="color: #7f0055;">text</span><span style="color: #7f0055;">&gt;</span>
+    <span style="color: #7f0055;">&lt;/</span><span style="color: #7f0055;">binding</span><span style="color: #7f0055;">&gt;</span>
+
+    <span style="color: #7f0055;">&lt;</span><span style="color: #7f0055;">binding</span> template=<span style="color: #2a00ff;">"</span><span style="color: #2a00ff;">TileLarge</span><span style="color: #2a00ff;">"</span><span style="color: #7f0055;">&gt;</span>
+      <span style="color: #7f0055;">&lt;</span><span style="color: #7f0055;">text</span><span style="color: #7f0055;">&gt;</span>Large<span style="color: #7f0055;">&lt;/</span><span style="color: #7f0055;">text</span><span style="color: #7f0055;">&gt;</span>
+    <span style="color: #7f0055;">&lt;/</span><span style="color: #7f0055;">binding</span><span style="color: #7f0055;">&gt;</span>
+
+  <span style="color: #7f0055;">&lt;/</span><span style="color: #7f0055;">visual</span><span style="color: #7f0055;">&gt;</span>
+<span style="color: #7f0055;">&lt;/</span><span style="color: #7f0055;">tile</span><span style="color: #7f0055;">&gt;</span>
+</pre>
+        </div>
+
+
+        <div data-tab="C#">
+<pre style='color:#000000;background:#ffffff;'><span style='color:#7f0055; font-weight:bold; '>new</span> TileContent()
+{
+    Visual = <span style='color:#7f0055; font-weight:bold; '>new</span> TileVisual()
+    {
+        TileSmall = <span style='color:#7f0055; font-weight:bold; '>new</span> TileBinding()
+        {
+            Content = <span style='color:#7f0055; font-weight:bold; '>new</span> TileBindingContentAdaptive()
+            {
+                Children =
+                {
+                    <span style='color:#7f0055; font-weight:bold; '>new</span> TileText()
+                    {
+                        Text = <span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>Small</span><span style='color:#2a00ff; '>"</span>
+                    }
+                }
+            }
+        },
+
+        TileMedium = <span style='color:#7f0055; font-weight:bold; '>new</span> TileBinding()
+        {
+            Content = <span style='color:#7f0055; font-weight:bold; '>new</span> TileBindingContentAdaptive()
+            {
+                Children =
+                {
+                    <span style='color:#7f0055; font-weight:bold; '>new</span> TileText()
+                    {
+                        Text = <span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>Medium</span><span style='color:#2a00ff; '>"</span>
+                    }
+                }
+            }
+        },
+
+        TileWide = <span style='color:#7f0055; font-weight:bold; '>new</span> TileBinding()
+        {
+            Content = <span style='color:#7f0055; font-weight:bold; '>new</span> TileBindingContentAdaptive()
+            {
+                Children =
+                {
+                    <span style='color:#7f0055; font-weight:bold; '>new</span> TileText()
+                    {
+                        Text = <span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>Wide</span><span style='color:#2a00ff; '>"</span>
+                    }
+                }
+            }
+        },
+
+        TileLarge = <span style='color:#7f0055; font-weight:bold; '>new</span> TileBinding()
+        {
+            Content = <span style='color:#7f0055; font-weight:bold; '>new</span> TileBindingContentAdaptive()
+            {
+                Children =
+                {
+                    <span style='color:#7f0055; font-weight:bold; '>new</span> TileText()
+                    {
+                        Text = <span style='color:#2a00ff; '>"</span><span style='color:#2a00ff; '>Large</span><span style='color:#2a00ff; '>"</span>
+                    }
+                }
+            }
+        }
+    }
+};
+</pre>
+        </div>
+    </div>
+
+
+
+<p>And then this should appear after the code box</p>
+
+    <!--Placing it in a form ensures that the name attribute on inputs doesn't have to be unique across the whole document.-->
+    <div class="tabs">
+
+
+        <!--Then contents come after all the inputs-->
+        <!--Order matters, must match up with the input orders-->
+        <div data-tab="XML">First content
+        </div>
+
+
+        <div data-tab="C#">Second content
+        </div>
+    </div>
+
+</body>
+</html>
