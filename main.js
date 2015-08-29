@@ -56,7 +56,7 @@ function initialize_tabs(tabs_parent)
         /* first one gets checked by default */
         if (first)
         {
-            input.attr('checked', '');
+            input.attr('checked', true);
             first = false;
         }
 
