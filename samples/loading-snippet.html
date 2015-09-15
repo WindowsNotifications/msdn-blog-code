@@ -1,0 +1,29 @@
+<html>
+<head>
+
+    <!--MSDN includes jQuery, but we need to include it locally when not on MSDN-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <script type="text/javascript" src="../js/main.js"></script>
+
+    <script type="text/javascript" src="../js/shCore.js"></script>
+
+    <script type="text/javascript" src="../js/shBrushCSharp.js"></script>
+
+    <script type="text/javascript" src="../js/shBrushXml.js"></script>
+
+    <link href="../css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="../css/shCore.css" rel="stylesheet" type="text/css" />
+
+    <link href="../css/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    <p>This is a sample of using remote snippet sources.</p>
+
+    <div class="tabs">
+        <div data-tab="XML" data-snippet-source="http://windowsnotifications.github.io/msdn-blog-snippets/10240/adaptive-tile-documentation/quick-sample/code.xml" data-snippet-type="xml"></div>
+        <div data-tab="C#" data-snippet-source="http://windowsnotifications.github.io/msdn-blog-snippets/10240/adaptive-tile-documentation/quick-sample/code.cs" data-snippet-type="csharp"></div>
+    </div>
+</body>
+</html>

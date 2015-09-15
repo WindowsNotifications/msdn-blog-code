@@ -1,12 +1,47 @@
+
+
 $(document).ready(function () {
 
     /* highlight code */
+    SyntaxHighlighter.defaults['gutter'] = false;
     SyntaxHighlighter.all();
 
     /* generate the input and labels */
     $(".tabs").each(function () {
 
         initialize_tabs($(this));
+
+    });
+
+    /* initialize snippets */
+    $('[data-snippet-source][data-snippet-type]').each(function () {
+
+        var parent = $(this);
+
+        var source = parent.attr('data-snippet-source');
+        var type = parent.attr('data-snippet-type');
+
+        parent.text("Loading...");
+
+        $.ajax({
+            url: source,
+            dataType: "text"
+        }).done(function (data) {
+
+            /* remove all children */
+            parent.empty();
+
+            var newChild = document.createElement("pre");
+            newChild.appendChild(document.createTextNode(data));
+            newChild.setAttribute("class", "brush: " + type);
+
+            /* push the item that will become the highlighted */
+            parent.append(newChild);
+
+            /* Have SyntaxHighlighter run on the new child */
+            SyntaxHighlighter.highlight({}, newChild);
+
+        });
 
     });
 
