@@ -4,6 +4,9 @@
 
 $(document).ready(function () {
 
+    /* highlight code */
+    SyntaxHighlighter.all();
+
     /* generate the input and labels */
     $(".tabs").each(function () {
 
