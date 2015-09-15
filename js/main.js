@@ -1,7 +1,3 @@
-
-
-
-
 $(document).ready(function () {
 
     /* highlight code */
@@ -13,20 +9,6 @@ $(document).ready(function () {
         initialize_tabs($(this));
 
     });
-
-    /* when a tab radiobox changes, update what's displayed */
-    /*$("input.tab").change(function() {
-
-        update_tab_group($(this).attr("name"));
-
-    });*/
-
-    /* and when the document loaded, we also update all the states to initialize everything */
-    /*$("input.tab").each(function () {
-
-        update_tab($(this));
-
-    });*/
 
 });
 
@@ -80,30 +62,5 @@ function initialize_tabs(tabs_parent)
     /* and then add at the beginning */
     elementsToAdd.forEach(function (el) {
         tabs_parent.prepend(el);
-    });
-}
-
-
-function update_tab(tab)
-{
-    var id = tab.attr("id");
-
-    var isChecked = tab.is(":checked");
-
-    var affectedContentElements = $("[data-tab=" + id + "]");
-
-    if (isChecked)
-        affectedContentElements.show();
-    else
-        affectedContentElements.hide();
-}
-
-function update_tab_group(tabGroupName)
-{
-    /* for each tab in that group */
-    $('input.tab[name="' + tabGroupName + '"]').each(function () {
-
-        update_tab($(this));
-
     });
 }
