@@ -41,7 +41,11 @@ $(document).ready(function () {
             /* Have SyntaxHighlighter run on the new child */
             SyntaxHighlighter.highlight({}, newChild);
 
-        });
+        }).fail(function () {
+
+            parent.text("Failed to load.");
+
+        });;
 
     });
 
