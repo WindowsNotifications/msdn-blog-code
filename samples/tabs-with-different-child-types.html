@@ -19,11 +19,13 @@
 
 </head>
 <body>
+    <p>EDIT: Turns out it's way too complicated to support having different element types under the tab. And there's no real use case for that. I should just switch all to divs, and it works correctly.</p>
+
     <p>This is a sample of using tabs with different types of children. The tabs should support having elements of different types, like one is a div element, and another is a pre element.</p>
 
     <div class="tabs">
-        <pre data-tab="XML">Some XML content</pre>
-        <pre data-tab="C#">Some C# content</pre>
+        <div data-tab="XML">Some XML content</div>
+        <div data-tab="C#">Some C# content</div>
     </div>
 </body>
 </html>
