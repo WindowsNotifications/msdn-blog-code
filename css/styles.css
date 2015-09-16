@@ -21,6 +21,9 @@ h1, h2, h3, h4, h5 {
 
 
 /* TABS */
+.tabs > div {
+    margin-bottom: 1em; /* margin after for content */
+}
 
 /* style tab header */
 .tabs > label {
