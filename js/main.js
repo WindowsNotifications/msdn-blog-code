@@ -28,6 +28,14 @@ $(document).ready(function () {
             dataType: "text"
         }).done(function (data) {
 
+            /* get the scroll position before adding */
+            var pageYOffsetBefore = window.pageYOffset;
+            var YPositionOfElement = parent.offset().top;
+            var documentHeightBefore = $(document).height();
+
+            /* compute whether item will be affecting our scroll position, based on whether the item is above our view or not */
+            var doesAffectScrollPosition = YPositionOfElement < pageYOffsetBefore;
+
             /* remove all children */
             parent.empty();
 
@@ -40,6 +48,16 @@ $(document).ready(function () {
 
             /* Have SyntaxHighlighter run on the new child */
             SyntaxHighlighter.highlight({}, newChild);
+
+            /* if the item affects our scroll position */
+            if (doesAffectScrollPosition) {
+
+                var documentHeightAfter = $(document).height();
+
+                var scrollBy = documentHeightAfter - documentHeightBefore;
+
+                window.scrollBy(null, scrollBy);
+            }
 
         }).fail(function () {
 
