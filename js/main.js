@@ -14,12 +14,27 @@ $(document).ready(function () {
     });
 
     /* initialize snippets */
-    $('[data-snippet-source][data-snippet-type]').each(function () {
+    $('[data-snippet-source]').each(function () {
 
         var parent = $(this);
 
         var source = parent.attr('data-snippet-source');
         var type = parent.attr('data-snippet-type');
+
+        /* If they didn't specify a type */
+        if (!type) {
+
+            /* Get the type from the file type */
+            type = source.split('.').pop().toLowerCase();
+
+            switch (type)
+            {
+                case "cs":
+                    type = "csharp";
+                    break;
+            }
+
+        }
 
         parent.text("Loading...");
 
