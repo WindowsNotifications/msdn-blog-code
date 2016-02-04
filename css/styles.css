@@ -106,3 +106,43 @@ pre.wrap {
 .tabs pre {
     margin: 0;
 }
+
+
+.app-using-control-screenshot {
+    display: none;
+    width: 100%;
+    height: 400px;
+    background-color: black;
+    background-size: contain;
+}
+
+.app-using-control {
+    width: 180px;
+    height: 180px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-color: blue;
+    position: relative;
+    display: inline-block;
+}
+
+.app-using-control > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+}
+
+.app-using-control > span {
+    position: absolute;
+    bottom: 7px;
+    left: 10px;
+    color: white;
+    font-weight: 600;
+}
+
+.app-using-control:nth-child(3n) {
+    margin-right: 0;
+}

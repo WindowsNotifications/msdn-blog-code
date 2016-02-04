@@ -136,3 +136,56 @@ function initialize_tabs(tabs_parent)
         tabs_parent.prepend(el);
     });
 }
+
+
+function initializeAppsUsingControl() {
+
+    $(".apps-using-control").each(function () {
+
+        var container = $(this);
+
+        // Add the screenshot container
+        var screenshotElement = document.createElement("div");
+        screenshotElement.className = "app-using-control-screenshot";
+        container.append(screenshotElement);
+
+    })
+
+    $('.app-using-control[icon][screenshot]').each(function () {
+
+        var parent = $(this);
+
+        // Get and clear the inner text
+        var name = parent.text();
+        parent.text("");
+
+        var icon = parent.attr('icon');
+        var screenshot = parent.attr('screenshot');
+
+        var iconElement = document.createElement("div");
+        iconElement.style.backgroundImage = icon;
+        parent.append(iconElement);
+
+        var nameElement = document.createElement("span");
+        nameElement.innerText = name;
+        parent.append(nameElement);
+
+
+        parent.hover(function () {
+
+            var screenshotElement = this.parents(".apps-using-control").find(".app-using-control-screenshot");
+
+            screenshotElement.css("background-image", screenshot);
+            screenshotElement.css("display", "block");
+
+        }, function () {
+
+            var screenshotElement = this.parents(".apps-using-control").find(".app-using-control-screenshot");
+
+            screenshotElement.css("display", "none");
+
+        });
+
+    });
+
+}
