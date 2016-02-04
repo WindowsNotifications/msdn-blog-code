@@ -167,7 +167,7 @@ function initializeAppsUsingControl() {
         var screenshot = parent.attr('data-screenshot');
 
         var iconElement = document.createElement("div");
-        iconElement.style.backgroundImage = icon;
+        iconElement.style.backgroundImage = "url('" + icon + "')";
         parent.append(iconElement);
 
         var nameElement = document.createElement("span");
@@ -179,7 +179,7 @@ function initializeAppsUsingControl() {
 
             var screenshotElement = this.parents(".apps-using-control").find(".app-using-control-screenshot");
 
-            screenshotElement.css("background-image", screenshot);
+            screenshotElement.css("background-image", "url('" + screenshot + "')");
             screenshotElement.css("display", "block");
 
         }, function () {
