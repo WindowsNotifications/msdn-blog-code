@@ -82,6 +82,10 @@ $(document).ready(function () {
 
     });
 
+
+    // Initialize the "AppsUsingControl" control
+    initializeAppsUsingControl();
+
 });
 
 var _uniqueIdNum = 0;
