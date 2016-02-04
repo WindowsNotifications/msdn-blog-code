@@ -114,13 +114,15 @@ pre.wrap {
     height: 400px;
     background-color: black;
     background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .app-using-control {
     width: 135px;
     height: 135px;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
     background-color: blue;
     position: relative;
     display: inline-block;
@@ -140,6 +142,8 @@ pre.wrap {
     right: 0;
     bottom: 0;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .app-using-control > span {
@@ -148,8 +152,4 @@ pre.wrap {
     left: 10px;
     color: white;
     font-weight: 600;
-}
-
-.app-using-control:nth-child(3n) {
-    margin-right: 0;
 }
