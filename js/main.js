@@ -151,7 +151,7 @@ function initializeAppsUsingControl() {
 
     })
 
-    $('.app-using-control[icon][screenshot]').each(function () {
+    $('.app-using-control[data-icon][data-screenshot]').each(function () {
 
         var parent = $(this);
 
@@ -159,8 +159,8 @@ function initializeAppsUsingControl() {
         var name = parent.text();
         parent.text("");
 
-        var icon = parent.attr('icon');
-        var screenshot = parent.attr('screenshot');
+        var icon = parent.attr('data-icon');
+        var screenshot = parent.attr('data-screenshot');
 
         var iconElement = document.createElement("div");
         iconElement.style.backgroundImage = icon;
