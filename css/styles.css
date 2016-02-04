@@ -117,13 +117,20 @@ pre.wrap {
 }
 
 .app-using-control {
-    width: 180px;
-    height: 180px;
+    width: 135px;
+    height: 135px;
     margin-right: 20px;
     margin-bottom: 20px;
     background-color: blue;
     position: relative;
     display: inline-block;
+}
+
+.app-using-control:link,
+.app-using-control:visited,
+.app-using-control:hover,
+.app-using-control:active {
+    text-decoration: none
 }
 
 .app-using-control > div {

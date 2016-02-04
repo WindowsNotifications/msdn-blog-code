@@ -177,14 +177,14 @@ function initializeAppsUsingControl() {
 
         parent.hover(function () {
 
-            var screenshotElement = this.parents(".apps-using-control").find(".app-using-control-screenshot");
+            var screenshotElement = $(this).parents(".apps-using-control").find(".app-using-control-screenshot");
 
             screenshotElement.css("background-image", "url('" + screenshot + "')");
             screenshotElement.css("display", "block");
 
         }, function () {
 
-            var screenshotElement = this.parents(".apps-using-control").find(".app-using-control-screenshot");
+            var screenshotElement = $(this).parents(".apps-using-control").find(".app-using-control-screenshot");
 
             screenshotElement.css("display", "none");
 
