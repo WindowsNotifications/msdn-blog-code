@@ -103,7 +103,7 @@ function initialize_tabs(tabs_parent)
 
     var elementsToAdd = [];
 
-    tabs_parent.children('[data-tab]').each(function () {
+    tabs_parent.children('[title]').each(function () {
 
         var id = getNewUniqueName();
 
@@ -126,7 +126,7 @@ function initialize_tabs(tabs_parent)
 
         elementsToAdd.push(jQuery('<label>',
             {
-                text: $(this).attr("data-tab"),
+                text: $(this).attr("title"),
                 "for": id
             }));
 
