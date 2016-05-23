@@ -23,7 +23,8 @@ img {
 
 
 th, td {
-    padding: 1rem;
+    padding: 2px;
+    vertical-align: top;
 }
 
 
@@ -51,6 +52,10 @@ th, td {
 }
 
 
+/* Bootstrap adds a bottom margin to label, we'll disable it inside the tabs control */
+.tabs label {
+    margin-bottom: 0;
+}
 
 /* style the radio box so it's not visible */
 .tabs > input {
